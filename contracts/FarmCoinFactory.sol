@@ -38,7 +38,7 @@ contract FarmCoinFactory {
         }
         return interest;
     }
-    /// Core function shells
+    
     function stake(uint256 amt, uint256 lock_down_period) public {
         require(amt > 0 && usdcToken.balanceOf(msg.sender) >= amt, "staking amount could not be zero or insufficient usdc balance");
         //console.log("%s has staked with %d usdc balance and %d amt", msg.sender,usdcToken.balanceOf(msg.sender), amt);
